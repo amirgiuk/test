@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+div.box{
+    width: 600px;
+    height: 300px;
+    margin: 50px auto;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+
+}
+
+div.box>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    transition: 1000ms;
+    backface-visibility: hidden;
+    box-shadow: 0 0 15px gray;
+
+}
+
+
+div.box:hover>img{
+    transform: rotateY(180deg);
+}
+
+div.box>div.text{
+    width: 600px;
+    height: 300px;
+    background-color: rgba(165, 182, 255, 0.705);
+    border-radius: 20px;
+    text-align: center;
+    transform: rotateY(180deg);
+    transition: 1000ms;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 15px gray;
+}
+
+div.box:hover>div.text{
+    
+    transform: rotateY(0deg);
+}
+
+div.box>div.text>h2{
+    padding: 20px 0;
+}
+
+div.box>div.text>p{
+    padding: 0px 30px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+div.box>div.text>a{
+    background-color: navy;
+    color: whitesmoke;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 5px 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px blue;
+    transition: 500ms;
+}
+
+div.box>div.text>a:hover{
+    background-color: rgba(0, 0, 128, 0.363);
+    box-shadow: 0 0 15px rgba(0, 0, 255, 0.582);
+    color: navy;
+}
+
+
+div.box_02{
+    width: 400px;
+    height: 400px;
+    margin: 50px auto;
+    position: relative;
+    perspective: 800px;
+}
+
+
+div.box_02>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+div.box_02>div:nth-of-type(1){
+    width: 200px;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(196, 195, 255);
+    left: 0;
+    top: 0;
+    transform-origin: left;
+    transition: 500ms;
+    border-right: 1px solid rgb(197, 181, 255);
+}
+
+div.box_02:hover>div:nth-of-type(1){
+    transform: rotatey(-110deg);
+}
+
+div.box_02>div:nth-of-type(2){
+    width: 200px;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(196, 195, 255);
+    right: 0;
+    top: 0;
+    transform-origin: right;
+    transition: 500ms;
+}
+
+
+div.box_02:hover>div:nth-of-type(2){
+    transform: rotatey(110deg);
+}
